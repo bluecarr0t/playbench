@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { EmailCapture } from "./email-capture";
 import { HeroShapes } from "./hero-shapes";
-import { WordmarkOrbit } from "./wordmark-orbit";
 
 export function JaydotenHero() {
   const [signupOpen, setSignupOpen] = useState(false);
@@ -15,19 +14,8 @@ export function JaydotenHero() {
     >
       <div className="flex min-h-dvh w-full flex-col">
         <div className="relative z-20 shrink-0 px-4 pt-2 pb-2 md:pb-6 xl:pointer-events-none xl:absolute xl:inset-x-0 xl:top-0 xl:z-10 xl:px-10 xl:pt-8 xl:pb-0">
-          <h1 className="relative w-[min(92vw,22rem)] md:w-[min(72vw,28rem)] xl:w-[min(46vw,34rem)]">
-            <span className="sr-only">Jaydoten</span>
-            <span className="relative block aspect-[2960/464] w-full [perspective:720px] [transform-style:preserve-3d]">
-              <img
-                src="/jaydoten-wordmark.svg"
-                alt=""
-                width={2960}
-                height={464}
-                draggable={false}
-                className="absolute inset-0 z-[1] h-full w-full object-contain object-left [shape-rendering:geometricPrecision] [transform:translateZ(0)]"
-              />
-              <WordmarkOrbit />
-            </span>
+          <h1 className="font-display text-[clamp(2.6rem,12vw,7.5rem)] leading-[0.82] tracking-[-0.02em]">
+            Play Bench
           </h1>
           <p className="mt-1 font-display text-[clamp(1.65rem,8vw,5.5rem)] leading-[0.86] tracking-[-0.02em] lg:mt-4 lg:text-[clamp(2.1rem,7.5vw,4.75rem)] xl:text-[clamp(2.1rem,7vw,4.35rem)]">
             STUDIO WORKS

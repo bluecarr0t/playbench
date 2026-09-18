@@ -40,18 +40,18 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Jaydoten — Experimental Studio",
+  title: "Play Bench — Experimental Studio",
   description:
-    "Jaydoten is a Los Angeles experimental studio for kinetic sculpture, hardware, and quiet wonders.",
+    "Play Bench is a Los Angeles experimental studio for kinetic sculpture, hardware, and quiet wonders.",
   openGraph: {
-    title: "Jaydoten",
+    title: "Play Bench",
     description:
       "A Los Angeles experimental studio for kinetic sculpture, hardware, and more.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jaydoten",
+    title: "Play Bench",
     description:
       "A Los Angeles experimental studio for kinetic sculpture, hardware, and more.",
   },
