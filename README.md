@@ -1,6 +1,6 @@
-# Play Bench
+# Playbench
 
-A single-page Next.js site for **Play Bench**, a contemporary art and creative studio. The design follows museum and gallery conventions: restrained typography, generous whitespace, catalog-style labeling, and exhibition-focused layout.
+A single-page Next.js site for **Playbench**, a contemporary art and creative studio. The design follows museum and gallery conventions: restrained typography, generous whitespace, catalog-style labeling, and exhibition-focused layout.
 
 ## Stack
 

@@ -1,13 +1,15 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 const RED = "#D32F27";
 const CREAM = "#F4EBD8";
 
-export function createJaydotenIcon(size: number) {
-  const width = Math.round(size * 0.7);
-  const height = Math.round(size * 0.86);
-  const stem = Math.round(size * 0.3);
-  const hook = Math.round(size * 0.24);
+export async function createPlaybenchIcon(size: number) {
+  const fontData = await readFile(
+    join(process.cwd(), "src/lib/fonts/BebasNeue-Regular.ttf"),
+  );
+  const fontSize = Math.round(size * 0.84);
 
   return new ImageResponse(
     (
@@ -19,39 +21,27 @@ export function createJaydotenIcon(size: number) {
           alignItems: "center",
           justifyContent: "center",
           background: CREAM,
+          color: RED,
+          fontFamily: "Bebas Neue",
+          fontSize,
+          lineHeight: 1,
+          letterSpacing: "-0.04em",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-end",
-            width,
-            height,
-          }}
-        >
-          <div
-            style={{
-              width: stem,
-              height: height - hook,
-              background: RED,
-            }}
-          />
-          <div
-            style={{
-              width,
-              height: hook,
-              background: RED,
-              borderBottomLeftRadius: hook,
-              borderBottomRightRadius: Math.round(stem * 0.45),
-            }}
-          />
-        </div>
+        P
       </div>
     ),
     {
       width: size,
       height: size,
+      fonts: [
+        {
+          name: "Bebas Neue",
+          data: fontData,
+          style: "normal",
+          weight: 400,
+        },
+      ],
     },
   );
 }

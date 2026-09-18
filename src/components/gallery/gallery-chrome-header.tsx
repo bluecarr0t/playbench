@@ -20,7 +20,7 @@ export function GalleryChromeHeader({
           href="/"
           className="font-mono text-[11px] tracking-[0.22em] text-white/45 uppercase transition hover:text-white"
         >
-          ← Play Bench
+          ← Playbench
         </Link>
       </div>
     </header>
