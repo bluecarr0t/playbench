@@ -2,14 +2,15 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
-export const shareImageAlt = "Playbench Studio Works";
+export const shareImageAlt = "Playbench Studio";
 export const shareImageSize = { width: 1200, height: 630 };
 export const shareImageContentType = "image/png";
 
 export async function createPlaybenchShareImage() {
-  const fontData = await readFile(
-    join(process.cwd(), "src/lib/fonts/BebasNeue-Regular.ttf"),
-  );
+  const [serifData, wordmark] = await Promise.all([
+    readFile(join(process.cwd(), "src/lib/fonts/InstrumentSerif-Italic.ttf")),
+    readFile(join(process.cwd(), "public/playbench-wordmark.png")),
+  ]);
 
   return new ImageResponse(
     (
@@ -28,16 +29,26 @@ export async function createPlaybenchShareImage() {
           style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
-            fontFamily: "Bebas Neue",
-            lineHeight: 0.86,
-            letterSpacing: "-0.02em",
-            textAlign: "center",
+            alignItems: "flex-start",
           }}
         >
-          <div style={{ display: "flex", fontSize: 148 }}>Playbench</div>
-          <div style={{ display: "flex", fontSize: 92, marginTop: 18 }}>
-            Studio Works
+          <img
+            src={`data:image/png;base64,${wordmark.toString("base64")}`}
+            width={820}
+            height={169}
+          />
+          <div
+            style={{
+              display: "flex",
+              marginTop: -28,
+              marginLeft: 111,
+              fontFamily: "Instrument Serif",
+              fontSize: 60,
+              fontStyle: "italic",
+              lineHeight: 1,
+            }}
+          >
+            studio
           </div>
         </div>
       </div>
@@ -46,9 +57,9 @@ export async function createPlaybenchShareImage() {
       ...shareImageSize,
       fonts: [
         {
-          name: "Bebas Neue",
-          data: fontData,
-          style: "normal",
+          name: "Instrument Serif",
+          data: serifData,
+          style: "italic",
           weight: 400,
         },
       ],

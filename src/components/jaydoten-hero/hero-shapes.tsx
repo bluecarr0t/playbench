@@ -1060,7 +1060,7 @@ export function HeroShapes() {
       <div
         className={`absolute right-0 bottom-0 left-0 z-30 flex h-[6.75rem] flex-col justify-center gap-1 border-t px-4 pt-2 pr-36 pb-[max(0.4rem,env(safe-area-inset-bottom))] xl:h-44 xl:gap-2 xl:px-8 xl:pt-4 xl:pr-48 xl:pb-3 xl:pl-16 ${
           hoverArmId ? "border-[#D32F27]/30" : "border-[#D32F27]/15"
-        } bg-[#F8F5F0]`}
+        } bg-[#EBE0C4]`}
       >
         <div className="shrink-0">
           <p className="font-display text-xs tracking-[0.16em] whitespace-nowrap text-[#D32F27]/70 lg:text-sm">

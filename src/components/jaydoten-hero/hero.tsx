@@ -14,12 +14,22 @@ export function JaydotenHero() {
     >
       <div className="flex min-h-dvh w-full flex-col">
         <div className="relative z-20 shrink-0 px-4 pt-2 pb-2 md:pb-6 xl:pointer-events-none xl:absolute xl:inset-x-0 xl:top-0 xl:z-10 xl:px-10 xl:pt-8 xl:pb-0">
-          <h1 className="font-display text-[clamp(2.6rem,12vw,7.5rem)] leading-[0.82] tracking-[-0.02em]">
-            Playbench
-          </h1>
-          <p className="mt-1 font-display text-[clamp(1.65rem,8vw,5.5rem)] leading-[0.86] tracking-[-0.02em] lg:mt-4 lg:text-[clamp(2.1rem,7.5vw,4.75rem)] xl:text-[clamp(2.1rem,7vw,4.35rem)]">
-            STUDIO WORKS
-          </p>
+          <div className="relative w-[min(92vw,22rem)] pb-3 md:w-[min(78vw,32rem)] xl:w-[min(52vw,38rem)]">
+            <h1>
+              <span className="sr-only">Playbench</span>
+              <img
+                src="/playbench-wordmark.svg"
+                alt=""
+                width={996}
+                height={220}
+                draggable={false}
+                className="h-auto w-full object-contain object-left"
+              />
+            </h1>
+            <p className="absolute top-[74%] left-[13.5%] pt-1 font-serif text-[clamp(1.45rem,4vw,2.6rem)] leading-none italic">
+              studio
+            </p>
+          </div>
           <p className="mt-4 max-w-xl font-sans text-[0.8125rem] leading-snug tracking-[-0.02em] text-[#D32F27]/85 lg:mt-10 lg:text-lg lg:leading-relaxed lg:tracking-normal">
             A Los Angeles experimental studio for kinetic sculptures and other
             creations made slowly, on purpose.

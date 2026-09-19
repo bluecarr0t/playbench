@@ -40,18 +40,18 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Playbench — Experimental Studio",
+  title: "Playbench Studio",
   description:
     "Playbench is a Los Angeles experimental studio for kinetic sculpture, hardware, and quiet wonders.",
   openGraph: {
-    title: "Playbench",
+    title: "Playbench Studio",
     description:
       "A Los Angeles experimental studio for kinetic sculpture, hardware, and more.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Playbench",
+    title: "Playbench Studio",
     description:
       "A Los Angeles experimental studio for kinetic sculpture, hardware, and more.",
   },
